@@ -1,0 +1,43 @@
+<Html>
+
+<head>
+    <title>Profile Page</title>
+</head>
+
+<body>
+    <h1>Create Profile</h1>
+    <form action="/registerprofile/" method="POST">
+        {% csrf_token %}
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male" /> Male <br>
+        <input type="radio" name="gender" value="Female" /> Female <br>
+        <input type="radio" name="gender" value="Other" /> Other
+        <br><br>
+
+        <label for="dob">DOB: </label>
+        <input type="date" name="dob" id="dob">
+        <br><br>
+
+        <label>Address:</label><br>
+        <textarea cols="80" rows="5" value="address" name="address" id="address"></textarea>
+        <br><br>
+
+        <label for="pincode">Pin Code: </label>
+        <input type="number" name="pincode" id="pincode">
+        <br><br>
+        <input type="hidden" name="register" value="{{register}}">
+        <input type="hidden" name="email" value="{{email}}">
+        <label for="state">State: </label>
+        <input type="text" name="state" id="state">
+        <br><br>
+
+        <label for="nationality">Nationality: </label>
+        <input type="text" name="nationality" id="nationality">
+        <br><br>
+
+        <button type="submit" class="registerbtn">Create Profile</button>
+
+    </form>
+</body>
+
+</html>

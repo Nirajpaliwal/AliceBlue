@@ -1,0 +1,22 @@
+<form action="/authenticateuser/" method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <h1>Login</h1>
+
+        <label for="email">Email: </label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+        <br><br>
+
+        <label for="psw">Password: </label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <br><br>
+
+        <button type="submit" class="loginbtn">Login</button>
+    </div>
+
+    <div class="container signin">
+        <p>New user here ? <a href="/register/">Create Account</a>.</p>
+    </div>
+
+    </div>
+</form>

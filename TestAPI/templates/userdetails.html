@@ -1,0 +1,36 @@
+<form action="/registeruser/" method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <h1>User Details</h1>
+        <hr>
+
+        <label for="name"><b>Name: </b></label>{{user.name}}
+        <br><br>
+
+        <label for="email"><b>Email: </b></label>{{user.email}}
+        <br><br>
+
+        <label for="phone"><b>Phone: </b></label>{{user.phone}}
+        <br><br>
+
+        <label for="gender"><b>Gender: </b></label>{{profile.gender}}
+        <br><br>
+
+        <label for="dob"><b>DOB: </b></label>{{profile.dob}}
+        <br><br>
+
+        <label for="address"><b>Address: </b></label>{{profile.address}}
+        <br><br>
+
+        <label for="pincode"><b>Pincode: </b></label>{{profile.pincode}}
+        <br><br>
+
+        <label for="state"><b>State: </b></label>{{profile.state}}
+        <br><br>
+
+        <label for="nationality"><b>Nationality: </b></label>{{profile.nationality}}
+        <br><br>
+
+    </div>
+
+</form>
